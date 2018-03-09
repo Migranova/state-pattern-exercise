@@ -12,20 +12,6 @@ public class StateContext {
         this.AcceptState = new AcceptState(this);
         initial = RejectState ;
     }
-    public void actionA() {
-        if (isFirstA == null) {
-            isFirstA = true;
-        }
-
-        initial.actionA();
-    }
-    public void actionB() {
-        if (isFirstA == null) {
-            isFirstA = false;
-        }
-
-        initial.actionB();
-    }
 
     public boolean isAccept() {
         return initial.isAccept();
